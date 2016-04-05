@@ -1,6 +1,6 @@
 {
    "wolkenkratzer":[
-      {
+     {
          "name":"Shanghai Tower",
          "stadt":"Shanghai",
          "hoehe":632
@@ -45,7 +45,7 @@
          "stadt":"Nanjing",
          "hoehe":450
       },
-            {
+      {
          "name":"Mecca Royal Clock Tower Hotel",
          "stadt":"Mekka",
          "hoehe":601
