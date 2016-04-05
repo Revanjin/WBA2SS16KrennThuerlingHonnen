@@ -1,7 +1,8 @@
 var fs = require('fs');
 
-var datei = fs.readFileSync('../wolkenkratzer.json');
-
-var string = datei.toString();
-
-console.log(string);
+fs.readFile('../wolkenkratzer.json', function(err, data){
+  if(err) throw err;
+  var bigString = JSON.stringify(data.toString());
+  var array = bigString.split("\\n");
+  console.log(array);
+});
