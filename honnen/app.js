@@ -7,12 +7,24 @@ fs.readFile('../wolkenkratzer.json', function(err, data){
     console.log('Error: ' + err);
     return;
   }
-  var objekt = JSON.parse(data);
+  var array = JSON.parse(data);
 
-  for(var i = 0; i < objekt.wolkenkratzer.length; i++){
-    console.log('Name: '.rainbow + objekt.wolkenkratzer[i]['name'].rainbow);
-    console.log(chalk.green('Stadt: ' + objekt.wolkenkratzer[i]['stadt']));
-    console.log(chalk.red('Höhe: '  + objekt.wolkenkratzer[i]['hoehe'] + 'm'));
+  Object.keys(array).sort(function(a, b){
+    return array[a].hoehe - array[b].hoehe;
+  });
+
+  fs.writeFile( 'wolkenkratzer_sortiert.json',
+                JSON.stringify(array), function(err){
+    if(err){
+      throw error;
+    }
+    console.log("File saved!");
+  });
+
+  for(var i = 0; i < array.wolkenkratzer.length; i++){
+    console.log('Name: '.rainbow + array.wolkenkratzer[i]['name'].rainbow);
+    console.log(chalk.green('Stadt: ' + array.wolkenkratzer[i]['stadt']));
+    console.log(chalk.red('Höhe: '  + array.wolkenkratzer[i]['hoehe'] + 'm'));
     console.log(chalk.white('--------------------'));
   }
 });
