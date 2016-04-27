@@ -2,5 +2,10 @@
   "name": "wolkenkratzer",
   "version": "1.0.0",
   "description": "Kick-Off Aufgabe WBA2 Sommersemester 2016 TH Köln",
-  "main": "app.js"
+  "main": "app.js",
+  "dependencies": {
+    "fs": "*",
+    "chalk": "*",
+    "colors": "*"
+  }
 }
