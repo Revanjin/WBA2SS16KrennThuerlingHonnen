@@ -4,8 +4,8 @@
   "description": "Kick-Off Aufgabe WBA2 Sommersemester 2016 TH Köln",
   "main": "app.js",
   "dependencies": {
-    "fs": "*",
-    "chalk": "*",
-    "colors": "*"
+    "fs": "1.0.0",
+    "chalk": "1.1.3",
+    "colors": "1.1.2"
   }
 }
