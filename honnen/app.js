@@ -14,7 +14,7 @@ fs.readFile('../wolkenkratzer.json', function(err, data){
   });
 
   fs.writeFile( 'wolkenkratzer_sortiert.json',
-                JSON.stringify(array), function(err){
+                JSON.stringify(array, null, '\t'), function(err){
     if(err){
       throw error;
     }
