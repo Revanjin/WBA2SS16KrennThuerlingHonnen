@@ -9,8 +9,8 @@ fs.readFile('../wolkenkratzer.json', function(err, data){
   }
   var array = JSON.parse(data);
 
-  array.sort(function(a, b){
-    return parseInt(a.hoehe) - parseInt(b.hoehe);
+  array['wolkenkratzer'].sort(function(a, b){
+    return a.hoehe - b.hoehe;
   });
 
   fs.writeFile( 'wolkenkratzer_sortiert.json',
