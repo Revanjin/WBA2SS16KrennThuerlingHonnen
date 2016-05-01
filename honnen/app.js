@@ -1,4 +1,4 @@
-var fs = require('fs');
+var fs    = require('fs');
 var chalk = require('chalk');
 var color = require('colors');
 
@@ -13,8 +13,7 @@ fs.readFile('../wolkenkratzer.json', function(err, data){
     return a.hoehe - b.hoehe;
   });
 
-  fs.writeFile( 'wolkenkratzer_sortiert.json',
-                JSON.stringify(array, null, '\t'), function(err){
+  fs.writeFile( 'wolkenkratzer_sortiert.json', JSON.stringify(array, null, '\t'), function(err){
     if(err){
       throw error;
     }
