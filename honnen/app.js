@@ -7,6 +7,7 @@ fs.readFile('../wolkenkratzer.json', function(err, data){
     console.log('Error: ' + err);
     return;
   }
+
   var array = JSON.parse(data);
 
   array['wolkenkratzer'].sort(function(a, b){
