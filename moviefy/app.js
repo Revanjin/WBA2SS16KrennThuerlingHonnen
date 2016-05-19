@@ -1,25 +1,21 @@
 var express = require('express');
 var bodyParser = require('body-parser');
+var jsonParser = bodyParser.json();
+
 var app = express();
-var serverPort = 3000;
 
 var movies = [
-  {name: '12 Years A Slave', rating: 8.1},
-  {name: 'Anchorman', rating: 7.2}
+  {title: "12 Years A Slave"},
+  {title: "Anchorman"}
 ]
 
-app.get('/', function(req, res){
-  res.status(200).json(movies[0].name);
+app.get('/movies', function(req, res){
+  res.status(200).json(movies);
 });
 
-app.get('/get', function(req, res){
-  res.status(200).json(movies[1].name);
+app.post('/movies', jsonParser, function(req, res){
+  movies.push(req.body);
+  res.type('plain').send('Added!');
 });
 
-app.post('/post', function(req, res){
-  console.log('Route /post aufgerufen');
-});
-
-app.listen(serverPort, function(){
-  console.log('Server listen on port ' + serverPort + '.');
-});
+app.listen(1337);
