@@ -1,0 +1,23 @@
+{
+  "name": "moviefy",
+  "version": "1.0.0",
+  "description": "WBA2 Projekt",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/rehne/WBA2SS16KrennThuerlingHonnen"
+  },
+  "author": "Christian Krenn, Alexander Thürling, René Honnen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rehne/WBA2SS16KrennThuerlingHonnen/issues"
+  },
+  "homepage": "https://github.com/rehne/WBA2SS16KrennThuerlingHonnen",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4"
+  }
+}
